@@ -1,14 +1,12 @@
-﻿; flashbang_fade.ahk
-
 Gui, -Caption +AlwaysOnTop +ToolWindow
 Gui, Color, White
 Gui, Show, x0 y0 w%A_ScreenWidth% h%A_ScreenHeight%, Flashbang
 
-; Fade in
+; Fade in (3x faster)
 Loop, 30
 {
     WinSet, Transparent, % (A_Index * 255 // 30), Flashbang
-    Sleep, 15
+    Sleep, 5  ; Changed from 15 to 5 for 3x faster fade-in
 }
 
 ; Hold at full opacity
